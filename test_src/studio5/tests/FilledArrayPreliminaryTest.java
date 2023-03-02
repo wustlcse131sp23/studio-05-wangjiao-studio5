@@ -18,8 +18,8 @@ public class FilledArrayPreliminaryTest {
 	@Test
 	public void testArrayLength0() {
 		int length = 0;
-		int ignored = 16;
-		int[] actuals = Methods.filledArray(length, ignored);
+		int value = 16;
+		int[] actuals = Methods.filledArray(length, value);
 		assertNotNull(actuals);
 		assertEquals(length, actuals.length);
 		int[] expecteds = {};
@@ -43,7 +43,7 @@ public class FilledArrayPreliminaryTest {
 		int value = 4;
 		int[] actuals = Methods.filledArray(length, value);
 		assertNotNull(actuals);
-		assertEquals(value, actuals.length); // Incorrect: FIXME!
+		assertEquals(length, actuals.length); // Incorrect: FIXME!
 		int[] expecteds = { value, value };
 		assertArrayEquals(expecteds, actuals);
 	}
